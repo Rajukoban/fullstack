@@ -1,0 +1,22 @@
+<h1 mat-dialog-title>{{data.name}} AadhaarCard Details</h1>
+<h4 mat-dialog-title>AadhaarCard Number : {{data.aadharNumber}}</h4>
+<div mat-dialog-content>
+    <mat-form-field>
+        <input matInput [(ngModel)]="data.name">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput [(ngModel)]="data.address">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput [(ngModel)]="data.contact">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput [(ngModel)]="data.email">
+      </mat-form-field>
+</div>
+
+<div mat-dialog-actions>
+    <button mat-raised-button color="primary" [mat-dialog-close]="data" [disabled]="!data.name || !data.email || !data.contact || !data.address">{{data.aadharNumber?'Update':'Add'}}</button>
+    <button mat-raised-button color="warn" (click)="onNoClick()" style="margin-top: 10px;">Cancel</button>
+
+</div>

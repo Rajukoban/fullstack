@@ -1,0 +1,21 @@
+<div class="login-container">
+    <h2 style="text-align: center;">Edit Form</h2>
+    <form (ngSubmit)="updateDetails()" method="post">
+        <input [(ngModel)]="aadhar.aadharNumber" name="aadharNumber"  type="hidden">
+      <mat-form-field>
+        <input matInput [(ngModel)]="aadhar.name" name="name" type="text">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput [(ngModel)]="aadhar.address" name="address" type="text">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput [(ngModel)]="aadhar.contact" name="contact" type="text"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput [(ngModel)]="aadhar.email" name="email" type="text"/>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Edit&Save</button>
+    </form>
+  </div>
+
+  

@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>AadhaarCard Details</h1>
+<div mat-dialog-content>
+  <mat-list>
+    <mat-list-item>
+      <strong>Aaadhaar Number: </strong> {{ aadhar.aadharNumber }}
+    </mat-list-item>
+    <mat-list-item>
+      <strong>Name: </strong> {{ aadhar.name }}
+    </mat-list-item>
+    <mat-list-item>
+      <strong>Email: </strong> {{ aadhar.email }}
+    </mat-list-item>
+    <mat-list-item>
+      <strong>Contact: </strong> {{ aadhar.contact }}
+    </mat-list-item>
+    <mat-list-item>
+        <strong>Address: </strong> {{ aadhar.address }}
+    </mat-list-item>
+  </mat-list>
+      <img src="assets/single-guy-profile-picture-in-college.jpg" alt="profile">
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="onClose()">Close</button>
+</div>

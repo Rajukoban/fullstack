@@ -1,0 +1,30 @@
+<div class="login-container">
+    <h2 style="text-align: center;">AadhaarCard Form</h2>
+    <form [formGroup]="registerform" (ngSubmit)="register()" method="post">
+      <mat-form-field>
+        <input matInput formControlName="aadharNumber" placeholder="Aadhar Number" [(ngModel)]="aadhar.aadharNumber" name="aadharNumber"  type="text">
+        <mat-error *ngIf="registerform.get('aadharNumber')?.hasError('required')">AadharCard Number Required</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Name" formControlName="name" [(ngModel)]="aadhar.name" name="name" type="text">
+        <mat-error *ngIf="registerform.get('name')?.hasError('required')">Name is Required</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Address" formControlName="address" [(ngModel)]="aadhar.address" name="address" type="text">
+        <mat-error *ngIf="registerform.get('address')?.hasError('required')">Address is Required</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Mobile Number" formControlName="contact" [(ngModel)]="aadhar.contact" name="contact" type="text"/>
+        <mat-error *ngIf="registerform.get('contact')?.hasError('required')">Mobile Number is Required</mat-error>
+        <mat-error *ngIf="registerform.get('contact')?.hasError('minLength')">Enter 10 Digits Mobile Number</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Email" formControlName="email" [(ngModel)]="aadhar.email" name="email" type="email"/>
+        <mat-error *ngIf="registerform.get('email')?.hasError('required')">Email is Required</mat-error>
+        <mat-error *ngIf="registerform.get('email')?.hasError('email')">Invalid Email</mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary"  type="submit">Register</button>
+    </form>
+  </div>
+
+  
